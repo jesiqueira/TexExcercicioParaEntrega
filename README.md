@@ -28,7 +28,13 @@
 7. numeroRepetidos
     - verifica se tem número repetidos
 9. verificaArrayIguais
-    - verifica se 2 arrays são iguais
+    - verificar se 2 arrays são iguais
+---
+## Como executar e visualizar o resultado do sistema.
+- Realizar clone do projeto para computador local.
+- acessar pasta ***01_numero_que_se_repetem*** do projeto e abrir o index no navegador de sua preferência, como sugestão usar o Chrome
+- acessar o DevTools na opção console.
+- O sistema está programado para executar a verificações 50 vezes, e o resultado será exibido no console do DevTools
 
 
  
