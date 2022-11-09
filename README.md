@@ -1,5 +1,6 @@
 # Exercicio 01:  Verificar número que se repete
 ---
+## Descrição:
 1. Fase 1
     - crie um array dinâmico com três posições [2,1,2]
     - crie uma iteração que retorne números aleatórios entre 1 e 3
@@ -16,6 +17,19 @@
     - Se os valores forem iguais: escreva 'Porta (x)' : aberta
     - Se os valores forem diferentes:
         - escreva 'Tente de novo' (Com a exceção do resultado ser de números iguais)
+---
+## Descrição das Funções
+1. sorteio
+    - Realiza o sorteio dos números
+3. criarArray
+    - Cria um array com retorno da função sorteio
+5. numerosArrayIguais
+    - Verifique se os números do array são iguais
+7. numeroRepetidos
+    - verifica se tem número repetidos
+9. verificaArrayIguais
+    - verifica se 2 arrays são iguais
+
 
  
 
