@@ -25,9 +25,7 @@
     - Cria um array com retorno da função sorteio
 5. numerosArrayIguais
     - Verifique se os números do array são iguais
-7. numeroRepetidos
-    - verifica se tem número repetidos
-9. verificaArrayIguais
+6. verificaArrayIguais
     - verificar se 2 arrays são iguais
 ---
 ## Como executar e visualizar o resultado do sistema.
