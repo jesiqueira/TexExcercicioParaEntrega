@@ -1,3 +1,5 @@
+let qtdPortasAbertas = []
+
 function sorteio() {
   return parseInt(Math.random() * 3) + 1;
 }
@@ -40,8 +42,9 @@ function numerosRepetidos(numeros) {
 }
 
 function verificaArrayIguais(anterior, atual) {
-  console.log(`anterior: ${anterior} - atual: ${atual}`);
+  // console.log(`anterior: ${anterior} - atual: ${atual}`);
   if (JSON.stringify(anterior) === JSON.stringify(atual)) {
+    qtdPortasAbertas.push(true)
     console.log('Porta (x) : aberta');
   } else {
     if (!numerosArrayIguais(anterior)) {
@@ -50,15 +53,32 @@ function verificaArrayIguais(anterior, atual) {
   }
 }
 
-var numeros = criarArray();
-for (let index = 0; index < 50; index++) {
-  let atual = criarArray();
-  // console.log(numeros)
-  verificaArrayIguais(numeros, atual);
-  numerosArrayIguais(numeros) === true
-    ? console.log('Numeros iguais ->  Porta 1: aberta')
-    : '';
-  console.log('Número anterior se repetem: ', numerosRepetidos(numeros));
-  numeros = atual;
-  console.log('-----------------------------------------------------');
-}
+var anterior = criarArray();
+// for (let index = 0; index < 50; index++) {
+  //   let atual = criarArray();
+  //   // console.log(numeros)
+  //   verificaArrayIguais(numeros, atual);
+  //   numerosArrayIguais(numeros) === true? console.log('Numeros iguais ->  Porta 1: aberta') : '';
+  //   console.log('Número anterior se repetem: ', numerosRepetidos(numeros));
+  //   numeros = atual;
+  //   console.log('-----------------------------------------------------');
+  // }
+  
+  for (let index = 0; index < 50; index++) {
+    let atual = criarArray()
+    if (qtdPortasAbertas.length === 3){
+      console.log(`Parabéns você fez ${index} jogadas e conseguiu abrir ${qtdPortasAbertas.length} portas ganhando o jogo.`)
+      break
+    }
+    if (numerosArrayIguais(anterior)){
+      qtdPortasAbertas.push(true)
+      console.log('Porta 1: aberta')
+
+    }
+    else{
+      verificaArrayIguais(anterior, atual)
+    }
+    anterior = atual  
+    console.log('-------')
+
+  }
